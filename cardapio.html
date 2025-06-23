@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardapio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- Cabeçalho -->
+      <header>
+        <img src="logo.png" alt="logo">
+        <h1>Coqueiro Bar & Restaurante</h1>
+        <p>Restaurante Coqueiro — Sabor e Tradição Desde 1988</p>
+        <!-- Navegação -->
+         <nav>
+            <ul>
+                <li><a href="cardapio">Cardápio</a></li>
+                <li><a href="pagInicial.html">Localização</a></li>
+                <li><a href="pagInicial.html">Contato</a></li>
+            </ul>
+         </nav>
+      </header>
+    <main>
+
+        <section id="cardapio">
+                    <nav class="sub-menu">
+                    <div class="container">
+                    <a href="" id="btn-pratos">Pratos Principais</a>
+                    <a href="" id="btn-bebidas">Bebidas</a>
+                    </div>
+                    </nav>
+
+            <section id="pratos">
+
+                <h1>Nossos Pratos!</h1>
+
+            <h2>Carne de Sol c/ Queijo Coalho + Coca lata </h2>
+            <img src="CARNEDESOL.webp" alt="imagemcarnedesol">
+            <p>R$ 54,90</p>
+
+            <h2>Contra File à Parmegiana + Pepsi Black</h2>
+            <img src="Contrafile.webp" alt="imagemcontra">
+            <p>R$54,90</p>
+
+            <H2>File de Frango Grelhado + Refrigerante</H2>
+            <img src="File de Frango.webp" alt="imagemFile">
+            <p>R$ 45,90</p>
+
+            <h2>Picanha Suína + Refrigerante</h2>
+            <img src="PicanhaSuina.webp" alt="imagemPicanha">
+            <p>R$ 43,90</p>
+
+            <h2>Isca de Frango + Refrigerante</h2>
+            <img src="IscadeFrango.webp" alt="Iscaimg">
+            <p>R$ 43,40</p>
+
+        </section>
+
+        <section id="bebidas">
+                <h1>Nossa Bebidas! </h1>
+
+                <h2> Refrigerantes lata</h2>
+                <img src="Refri.webp" alt="imgRefri">
+                <p>R$ 7,49</p>
+
+                <h2> Sucos naturais </h2>
+                <img src="Sucos.webp" alt="sucoimg">
+                <p>R$ 13,00</p>
+            </section>
+
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Coqueiro Bar & Restaurante - Todos os direitos reservados.</p>
+        <p>Conecte-se conosco:</p>
+        <a href="https://www.instagram.com/coqueirosbares/">Instagram</a>
+        <a href="https://www.facebook.com/coqueirosbares">Facebook</a>
+    </footer>
+
+    <script>
+  const btnPratos = document.getElementById('btn-pratos');
+  const btnBebidas = document.getElementById('btn-bebidas');
+  const secaoPratos = document.getElementById('pratos');
+  const secaoBebidas = document.getElementById('bebidas');
+
+  // Função para mostrar só a seção desejada
+  function mostrarSecao(secao) {
+    if (secao === 'pratos') {
+      secaoPratos.style.display = 'block';
+      secaoBebidas.style.display = 'none';
+    } else {
+      secaoPratos.style.display = 'none';
+      secaoBebidas.style.display = 'block';
+    }
+  }
+
+  // Ao clicar nos botões
+  btnPratos.addEventListener('click', function(e) {
+    e.preventDefault();
+    mostrarSecao('pratos');
+  });
+
+  btnBebidas.addEventListener('click', function(e) {
+    e.preventDefault();
+    mostrarSecao('bebidas');
+  });
+
+  // Mostra os pratos por padrão ao carregar
+  mostrarSecao('pratos');
+</script>
+
+</body>
+</html>

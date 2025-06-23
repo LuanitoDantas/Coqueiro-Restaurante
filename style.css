@@ -1,0 +1,377 @@
+/* Fonte sugerida para o título */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fffaf0; /* tom claro com pegada rústica */
+  color: #fff; /* texto branco */
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  position: relative;
+  min-height: 300px; /* garante que o fundo apareça */
+  background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20231103/pngtree-lush-texture-of-green-coconut-palm-trees-a-tropical-haven-image_13764963.png');
+  background-size: cover;
+  background-position: center;
+  color: #fff; /* texto branco no header */
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 5px solid #c68c53;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3); /* overlay preto semitransparente com opacidade reduzida */
+  z-index: 0;
+}
+
+header * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ajustes no texto para o fundo */
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  margin-bottom: 0.3rem;
+  color: #fff; /* texto branco */
+}
+
+header p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85); /* branco com leve transparência */
+}
+
+header img {
+  max-width: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Navbar principal */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: #2e5339;
+  padding: 15px 0;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+
+  border: 2px solid #c68c53;
+  border-radius: 10px;
+  padding: 8px 16px;
+  background-color: #3b2f2f;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  background-color: #c68c53;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Faixa sub-menu */
+.sub-menu {
+  background-color: transparent; /* sem fundo na faixa */
+  padding: 40px 0;
+}
+
+.sub-menu .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.sub-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 12px 24px;
+  background-color: rgba(94, 76, 58, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease-in-out;
+}
+
+.sub-menu a:hover {
+  background-color: #fff;
+  color: #5e4c3a;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+}
+
+/* Main com fundo de madeira escura + overlay */
+main {
+  position: relative;
+  background-image: url('https://static.vecteezy.com/ti/fotos-gratis/p2/4753476-madeira-escura-para-textura-ou-fundo-gratis-foto.jpg');
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 12px;
+  /* background: transparent;  removido */
+}
+
+/* Sobreposição escura */
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25); /* opacidade reduzida */
+  z-index: -1;
+  border-radius: 12px;
+}
+
+/* Seções */
+section {
+  max-width: 1000px;
+  margin: 0 auto 50px;
+  color: #fff; /* texto branco */
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+}
+
+p {
+  font-size: 1rem;
+  color: #fff; /* texto branco */
+}
+
+/* Imagens dos pratos */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px 0 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Mapa */
+.mapa iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Contato */
+#contato a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#contato a:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+  background-color: #2e5339;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: #f4e2d8;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .sub-menu .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  section {
+    padding: 30px 15px;
+  }
+}
+
+/* Seção de destaques (carrossel) */
+.destaques {
+  overflow: hidden;
+  max-width: 100%;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+.carrossel {
+  display: flex;
+  animation: deslizar 20s linear infinite;
+}
+
+.carrossel img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin: 0 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Animação do carrossel */
+@keyframes deslizar {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Seção de descrição */
+.sobre-o-restaurante {
+  max-width: 900px;
+  margin: 0 auto 50px;
+  padding: 20px;
+  background-color: rgba(255, 250, 240, 0.1); /* fundo claro quase transparente */
+  border-left: 5px solid #c68c53;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+  color: #fff; /* texto branco */
+}
+
+.sobre-o-restaurante h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.sobre-o-restaurante p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #fff;
+}
+
+.destaques {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 20px;
+  color: #fff;
+}
+
+.titulo-destaques {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.carrossel-container {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.carrossel-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrossel-slides img {
+  flex: 0 0 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  background-color: #fff; /* fundo neutro para imagens menores */
+  padding: 10px;
+}
+
+/* Botões de navegação */
+.seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 16px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+.seta.esquerda {
+  left: 10px;
+}
+
+.seta.direita {
+  right: 10px;
+}
+
+/* Pontinhos */
+.indicadores {
+  margin-top: 10px;
+}
+
+.ponto {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.ponto.ativo {
+  background-color: #c68c53;
+}
